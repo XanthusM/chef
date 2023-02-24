@@ -273,7 +273,6 @@ const {
           const { masterChef, lptoken, owner, otherAccount } = await loadFixture(deployMasterChef);
           await lptoken.allowance(owner.address, masterChef.address);
           await lptoken.approve(masterChef.address, 90);
-          //await lptoken.mint(owner.address, 100);
           await lptoken.mint(otherAccount.address, 100);
           await masterChef.add(1000, lptoken.address, 1);
           await expect (masterChef.deposit(lptoken.address, 10, otherAccount.address)).to.be.reverted;
