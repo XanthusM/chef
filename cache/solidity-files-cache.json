@@ -1,0 +1,774 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/xanthus/Desktop/MasterChief/contracts/MasterChef.sol": {
+      "lastModificationDate": 1677235210546,
+      "contentHash": "3ee4ebf84c834174615293b3441725a1",
+      "sourceName": "contracts/MasterChef.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/security/ReentrancyGuard.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "IPancakePair",
+        "MasterChef"
+      ]
+    },
+    "/Users/xanthus/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1674908701186,
+      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/Users/xanthus/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1674908701160,
+      "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/xanthus/node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+      "lastModificationDate": 1674908701197,
+      "contentHash": "0320a90f714843ca19373ed143fc4466",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol",
+        "../extensions/draft-IERC20Permit.sol",
+        "../../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/Users/xanthus/node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol": {
+      "lastModificationDate": 1674908701196,
+      "contentHash": "a8e2d1c30042f64ed89c9d4157eb6cb9",
+      "sourceName": "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "/Users/xanthus/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1674908701161,
+      "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "/Users/xanthus/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1674908701035,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/xanthus/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1674908701029,
+      "contentHash": "f31ad6fc4bbf9c06203987220156a6ba",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/Users/xanthus/node_modules/@openzeppelin/contracts/token/ERC20/extensions/draft-IERC20Permit.sol": {
+      "lastModificationDate": 1674908701041,
+      "contentHash": "fb77f144244b9ab12533aa6ce85ef8c5",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/draft-IERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Permit"
+      ]
+    },
+    "/Users/xanthus/Desktop/MasterChief/node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol": {
+      "lastModificationDate": 1676874941577,
+      "contentHash": "a8e2d1c30042f64ed89c9d4157eb6cb9",
+      "sourceName": "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "/Users/xanthus/Desktop/MasterChief/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1676874941355,
+      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/Users/xanthus/Desktop/MasterChief/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1676874948288,
+      "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/xanthus/Desktop/MasterChief/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1676874951210,
+      "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Metadata"
+      ]
+    },
+    "/Users/xanthus/Desktop/MasterChief/node_modules/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+      "lastModificationDate": 1676874951208,
+      "contentHash": "0320a90f714843ca19373ed143fc4466",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "../IERC20.sol",
+        "../extensions/draft-IERC20Permit.sol",
+        "../../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/Users/xanthus/Desktop/MasterChief/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1676874941584,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/xanthus/Desktop/MasterChief/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1676874941584,
+      "contentHash": "f31ad6fc4bbf9c06203987220156a6ba",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/Users/xanthus/Desktop/MasterChief/node_modules/@openzeppelin/contracts/token/ERC20/extensions/draft-IERC20Permit.sol": {
+      "lastModificationDate": 1676874951211,
+      "contentHash": "fb77f144244b9ab12533aa6ce85ef8c5",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/draft-IERC20Permit.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Permit"
+      ]
+    },
+    "/Users/xanthus/Desktop/MasterChief/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1676874948315,
+      "contentHash": "834a0dde221759af42b030253315b086",
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "./extensions/IERC20Metadata.sol",
+        "../../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/Users/xanthus/Desktop/MasterChief/contracts/Narfex.sol": {
+      "lastModificationDate": 1676871186039,
+      "contentHash": "285548e79d73edd86b6118459bbac8c3",
+      "sourceName": "contracts/Narfex.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "Narfex"
+      ]
+    },
+    "/Users/xanthus/Desktop/MasterChief/contracts/lpToken.sol": {
+      "lastModificationDate": 1677044214089,
+      "contentHash": "0a884a7dfd3083096686b9921ded72c6",
+      "sourceName": "contracts/lpToken.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": false
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "lpToken"
+      ]
+    }
+  }
+}

@@ -213,12 +213,35 @@ const {
           await expect (masterChef.getUserReward(lptoken.address, owner.address)).to.be.reverted;
             });
 
+        //it("Should return can user get harvest", async function () {
+          //const { masterChef, lptoken, owner } = await loadFixture(deployMasterChef);
+          //await masterChef.add(1000, lptoken.address, 0);
+          //await masterChef.getIsUserCanHarvest(lptoken.address, owner.address);
+            //});
+
+        it("Should return can user get early withdraw", async function () {
+          const { masterChef, lptoken, owner, otherAccount } = await loadFixture(deployMasterChef);
+          await lptoken.allowance(owner.address, masterChef.address);
+          await lptoken.approve(masterChef.address, 90);
+          await lptoken.mint(owner.address, 100);
+          await lptoken.mint(otherAccount.address, 100);
+          await masterChef.add(1000, lptoken.address, 1);
+          await masterChef.deposit(lptoken.address, 50, otherAccount.address);
+          await masterChef.getIsEarlyWithdraw(lptoken.address, owner.address);
+            });
+
         it("Should return user pool size", async function () {
           const { masterChef, lptoken, owner } = await loadFixture(deployMasterChef);
           await masterChef.add(1000, lptoken.address, 1);
           await lptoken.mint(owner.address, 10000);
           await masterChef.getUserPoolSize(lptoken.address, owner.address);
             });
+
+        //it("Should return pool data", async function () {
+          //const { masterChef, lptoken } = await loadFixture(deployMasterChef);
+          //await masterChef.add(1000, lptoken.address, 1);
+          //await masterChef.getPoolData(lptoken.address);
+            //});
 
         it("Should return pool user data", async function () {
           const { masterChef, lptoken, owner } = await loadFixture(deployMasterChef);
@@ -259,6 +282,12 @@ const {
           await masterChef.harvest(lptoken.address);
             });
 
+        //it("Should  reward transfer to user", async function () {
+          //const { masterChef, lptoken, owner } = await loadFixture(deployMasterChef);
+          //await masterChef.add(1000, lptoken.address, 1);
+          //await masterChef.rewardTransfer(owner, 10, 1, 0);
+            //});
+
         it("Should deposit", async function () {
           const { masterChef, lptoken, owner, otherAccount } = await loadFixture(deployMasterChef);
           await lptoken.allowance(owner.address, masterChef.address);
@@ -273,6 +302,7 @@ const {
           const { masterChef, lptoken, owner, otherAccount } = await loadFixture(deployMasterChef);
           await lptoken.allowance(owner.address, masterChef.address);
           await lptoken.approve(masterChef.address, 90);
+          //await lptoken.mint(owner.address, 100);
           await lptoken.mint(otherAccount.address, 100);
           await masterChef.add(1000, lptoken.address, 1);
           await expect (masterChef.deposit(lptoken.address, 10, otherAccount.address)).to.be.reverted;
